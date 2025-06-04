@@ -47,7 +47,7 @@ export function HeroSection() {
         </div>
         <div className="flex justify-center">
           <Image
-            src="/cv.png"
+            src="/aimane.png"
             alt="Maane Aimane"
             width={400}
             height={400}
