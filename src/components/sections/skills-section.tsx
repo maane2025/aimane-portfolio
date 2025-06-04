@@ -50,7 +50,7 @@ export function SkillsSection() {
       <SectionHeader title="Skills" subtitle="My technical and linguistic abilities." />
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
         {skillCategories.map((category) => (
-          <Card key={category.id} className="shadow-lg">
+          <Card key={category.id} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.03]">
             <CardHeader className="flex flex-row items-start space-x-4 p-4 md:p-6">
               <category.icon className="h-10 w-10 md:h-12 md:w-12 text-accent shrink-0" />
               <div className="flex-grow mt-1 md:mt-0">
@@ -72,7 +72,7 @@ export function SkillsSection() {
         ))}
       </div>
 
-      <Card className="shadow-lg">
+      <Card className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.03]">
         <CardHeader className="flex flex-row items-start space-x-4 p-4 md:p-6">
           <spokenLanguagesData.icon className="h-10 w-10 md:h-12 md:w-12 text-accent shrink-0" />
           <div className="flex-grow mt-1 md:mt-0">

@@ -51,7 +51,7 @@ export function ProjectsSection() {
       <SectionHeader title="Recent Projects" subtitle="A showcase of my academic and personal initiatives." />
       <div className="grid md:grid-cols-1 gap-12">
         {projects.map((project, index) => (
-          <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.01]">
+          <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.03]">
             <div className="md:flex">
               <div className="md:w-1/3 bg-secondary/30 flex items-center justify-center p-8 h-64 md:h-auto">
                 <project.icon className="h-40 w-40 text-primary" aria-label={`${project.title} icon`} />

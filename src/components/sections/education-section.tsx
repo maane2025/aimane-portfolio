@@ -53,7 +53,7 @@ export function EducationSection() {
           </h3>
           <div className="space-y-6">
             {educationHistory.map((edu, index) => (
-              <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02]">
+              <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.03]">
                 <CardHeader>
                   <CardTitle className="font-headline text-xl text-primary">{edu.degree}</CardTitle>
                   <CardDescription className="text-sm text-muted-foreground">
@@ -72,7 +72,7 @@ export function EducationSection() {
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02]">
+              <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.03]">
                 <CardHeader>
                   <CardTitle className="font-headline text-lg text-primary">{cert.title}</CardTitle>
                   <CardDescription className="text-sm text-muted-foreground">

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Home, Briefcase, Lightbulb, GraduationCap, Settings2, Mail, X } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { ThemeToggleButton } from "@/components/theme-toggle-button";
 
 interface NavItem {
   href: string;
@@ -35,7 +36,7 @@ export function Navigation() {
           <span className="font-headline text-xl font-bold text-primary">Aimane Maane</span>
         </Link>
         
-        <nav className="hidden md:flex gap-1">
+        <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
             <Button key={item.label} variant="ghost" asChild>
               <Link href={item.href} className="text-sm font-medium text-foreground hover:text-accent transition-colors">
@@ -43,9 +44,11 @@ export function Navigation() {
               </Link>
             </Button>
           ))}
+          <ThemeToggleButton />
         </nav>
 
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggleButton />
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
