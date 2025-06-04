@@ -1,31 +1,36 @@
 
-import Image from 'next/image';
 import { Section } from '@/components/section';
 import { SectionHeader } from '@/components/section-header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Code, Wrench, Database, Languages } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
-const skillCategories = [
+interface SkillCategoryData {
+  id: string;
+  title: string;
+  skills: string[];
+  icon: LucideIcon;
+}
+
+const skillCategories: SkillCategoryData[] = [
   {
     id: "languages",
     title: "Programming Languages",
     skills: ["JavaScript", "Java (JEE, Spring)", "Python", "Dart", "SQL"],
-    imageUrl: "https://placehold.co/64x64.png",
-    imageHint: "abstract code"
+    icon: Code,
   },
   {
     id: "technologies",
     title: "Technologies & Tools",
     skills: ["ReactJS", "Angular", "Flutter", "Firebase", "Docker", "Git/GitHub"],
-    imageUrl: "https://placehold.co/64x64.png",
-    imageHint: "gears tools"
+    icon: Wrench,
   },
   {
     id: "databases",
     title: "Databases",
     skills: ["MySQL", "MongoDB"],
-    imageUrl: "https://placehold.co/64x64.png",
-    imageHint: "database server"
+    icon: Database,
   }
 ];
 
@@ -36,47 +41,8 @@ const spokenLanguagesData = {
     { lang: "French", level: "Professional" },
     { lang: "English", level: "Fluent" },
   ],
-  imageUrl: "https://placehold.co/64x64.png",
-  imageHint: "dialogue speech"
+  icon: Languages,
 };
-
-interface SkillCategoryProps {
-  title: string;
-  skills: string[];
-  imageUrl: string;
-  imageHint: string;
-}
-
-const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills, imageUrl, imageHint }) => (
-  <Card className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02]">
-    <CardHeader className="flex flex-row items-start space-x-4 p-4 md:p-6">
-      <div className="relative w-12 h-12 md:w-16 md:h-16 shrink-0">
-        <Image
-          src={imageUrl}
-          alt={`${title} icon`}
-          width={64}
-          height={64}
-          className="rounded-md object-cover"
-          data-ai-hint={imageHint}
-        />
-      </div>
-      <div className="flex-grow mt-1 md:mt-0">
-        <CardTitle className="font-headline text-lg md:text-xl text-primary">
-          {title}
-        </CardTitle>
-      </div>
-    </CardHeader>
-    <CardContent className="pt-0 p-4 md:p-6">
-      <div className="flex flex-wrap gap-2">
-        {skills.map((skill, index) => (
-          <Badge key={index} variant="secondary" className="text-sm px-3 py-1 bg-accent/10 text-accent-foreground hover:bg-accent/20">
-            {skill}
-          </Badge>
-        ))}
-      </div>
-    </CardContent>
-  </Card>
-);
 
 export function SkillsSection() {
   return (
@@ -84,28 +50,31 @@ export function SkillsSection() {
       <SectionHeader title="Skills" subtitle="My technical and linguistic abilities." />
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
         {skillCategories.map((category) => (
-          <SkillCategory
-            key={category.id}
-            title={category.title}
-            skills={category.skills}
-            imageUrl={category.imageUrl}
-            imageHint={category.imageHint}
-          />
+          <Card key={category.id} className="shadow-lg">
+            <CardHeader className="flex flex-row items-start space-x-4 p-4 md:p-6">
+              <category.icon className="h-10 w-10 md:h-12 md:w-12 text-accent shrink-0" />
+              <div className="flex-grow mt-1 md:mt-0">
+                <CardTitle className="font-headline text-lg md:text-xl text-primary">
+                  {category.title}
+                </CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent className="pt-0 p-4 md:p-6">
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill, index) => (
+                  <Badge key={index} variant="secondary" className="text-sm px-3 py-1 bg-accent/10 text-accent-foreground hover:bg-accent/20">
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         ))}
       </div>
-      
-      <Card className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02]">
+
+      <Card className="shadow-lg">
         <CardHeader className="flex flex-row items-start space-x-4 p-4 md:p-6">
-          <div className="relative w-12 h-12 md:w-16 md:h-16 shrink-0">
-            <Image
-              src={spokenLanguagesData.imageUrl}
-              alt={`${spokenLanguagesData.title} icon`}
-              width={64}
-              height={64}
-              className="rounded-md object-cover"
-              data-ai-hint={spokenLanguagesData.imageHint}
-            />
-          </div>
+          <spokenLanguagesData.icon className="h-10 w-10 md:h-12 md:w-12 text-accent shrink-0" />
           <div className="flex-grow mt-1 md:mt-0">
             <CardTitle className="font-headline text-lg md:text-xl text-primary">
               {spokenLanguagesData.title}

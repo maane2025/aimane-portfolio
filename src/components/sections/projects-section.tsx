@@ -31,14 +31,14 @@ export function ProjectsSection() {
       <SectionHeader title="Recent Projects" subtitle="Some examples of my academic and personal achievements." />
       <div className="grid md:grid-cols-1 gap-8">
         {projects.map((project, index) => (
-          <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02]">
+          <Card key={index} className="overflow-hidden shadow-lg">
             <div className="md:flex">
               <div className="md:w-1/2">
-                 <Image 
-                    src={project.imageUrl} 
-                    alt={project.title} 
-                    width={600} 
-                    height={400} 
+                 <Image
+                    src={project.imageUrl}
+                    alt={project.title}
+                    width={600}
+                    height={400}
                     className="object-cover w-full h-64 md:h-full"
                     data-ai-hint={project.imageHint}
                   />
