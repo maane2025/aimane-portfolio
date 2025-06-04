@@ -17,10 +17,10 @@ const projects = [
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "web application dashboard",
     githubLinks: [
-      { url: "https://github.com/maane2025/gestiondeslivres", name: "gestiondeslivres" },
-      { url: "https://github.com/maane2025/ebaking-backend", name: "ebaking-backend" },
-      { url: "https://github.com/maane2025/authentificationSmartcare", name: "authentificationSmartcare" },
-      { url: "https://github.com/maane2025/hopitalauthentification-backend", name: "hopitalauthentification-backend" }
+      { url: "https://github.com/maane2025/gestiondeslivres", name: "gestiondeslivres (Frontend)" },
+      { url: "https://github.com/maane2025/ebaking-backend", name: "ebaking-backend (Example Backend)" },
+      { url: "https://github.com/maane2025/authentificationSmartcare", name: "authentificationSmartcare (Auth Service)" },
+      { url: "https://github.com/maane2025/hopitalauthentification-backend", name: "hopitalauthentification-backend (Hospital API)" }
     ]
   },
 ];
@@ -43,25 +43,27 @@ export function ProjectsSection() {
                     data-ai-hint={project.imageHint}
                   />
               </div>
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 flex flex-col">
                 <CardHeader>
                   <CardTitle className="font-headline text-xl md:text-2xl text-primary">{project.title}</CardTitle>
                   <CardDescription className="text-sm text-muted-foreground">
                     {project.institution} | {project.date}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-foreground mb-4">{project.description}</p>
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-primary mb-2">Technologies Used:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, i) => (
-                        <Badge key={i} variant="secondary" className="bg-accent/20 text-accent-foreground hover:bg-accent/30">{tech}</Badge>
-                      ))}
+                <CardContent className="flex-grow flex flex-col justify-between">
+                  <div>
+                    <p className="text-foreground mb-4">{project.description}</p>
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-primary mb-2">Technologies Used:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, i) => (
+                          <Badge key={i} variant="secondary" className="bg-accent/20 text-accent-foreground hover:bg-accent/30">{tech}</Badge>
+                        ))}
+                      </div>
                     </div>
                   </div>
                   {project.githubLinks && project.githubLinks.length > 0 && (
-                    <div>
+                    <div className="mt-auto">
                       <h4 className="font-semibold text-primary mb-2">Project Repositories:</h4>
                       <div className="space-y-2">
                         {project.githubLinks.map((link, i) => (
