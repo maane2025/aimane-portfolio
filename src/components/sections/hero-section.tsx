@@ -6,6 +6,9 @@ import { Github, Linkedin, Download } from 'lucide-react';
 import { Section } from '@/components/section';
 
 export function HeroSection() {
+  // This is a base64 encoded 1x1 transparent PNG to use as a blurDataURL
+  const blurDataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
+
   return (
     <Section id="home" className="bg-muted/30">
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -48,12 +51,14 @@ export function HeroSection() {
         <div className="flex justify-center">
           <Image
             src="/aimane.png"
-            alt="Maane Aimane"
+            alt="Maane Aimane professional profile"
             width={400}
             height={400}
             className="shadow-xl object-contain"
             data-ai-hint="profile portrait"
             priority
+            placeholder="blur"
+            blurDataURL={blurDataURL}
           />
         </div>
       </div>
