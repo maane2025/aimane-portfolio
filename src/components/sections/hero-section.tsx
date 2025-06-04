@@ -51,7 +51,7 @@ export function HeroSection() {
             alt="Maane Aimane"
             width={400}
             height={400}
-            className="shadow-xl object-contain border-4 border-accent"
+            className="shadow-xl object-contain"
             data-ai-hint="profile portrait"
             priority
           />
