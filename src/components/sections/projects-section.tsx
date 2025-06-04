@@ -3,9 +3,8 @@ import { Section } from '@/components/section';
 import { SectionHeader } from '@/components/section-header';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import Image from 'next/image';
 import Link from 'next/link';
-import { Github } from 'lucide-react';
+import { Hospital } from 'lucide-react'; // Import Hospital icon
 
 // Define the single project directly
 const project = {
@@ -14,28 +13,19 @@ const project = {
   date: "March – May 2025 (Academic project)",
   description: "Creation of a microservices-based web application for managing patients, doctors, and appointments. Secure API with role management.",
   technologies: ["React.js", "Spring Boot", "Microservices", "REST API"],
-  imageUrl: "https://placehold.co/600x400.png",
-  imageHint: "web application dashboard",
-  // githubLinks removed as per request
+  // imageUrl and imageHint are no longer used for this specific project as we are using an icon
 };
 
 export function ProjectsSection() {
   return (
     <Section id="projects" className="bg-muted/30">
-      <SectionHeader title="Recent Projects" subtitle="An example of my academic achievements." />
+      <SectionHeader title="Recent Project Example" subtitle="An example of my academic achievements." />
       <div className="grid md:grid-cols-1 gap-8">
         {/* Display the single project */}
-        <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02]">
+        <Card className="overflow-hidden shadow-lg">
           <div className="md:flex">
-            <div className="md:w-1/2">
-              <Image
-                src={project.imageUrl}
-                alt={project.title}
-                width={600}
-                height={400}
-                className="object-cover w-full h-64 md:h-full"
-                data-ai-hint={project.imageHint}
-              />
+            <div className="md:w-1/2 bg-secondary/30 flex items-center justify-center p-8 h-64 md:h-full">
+              <Hospital className="h-32 w-32 text-primary" aria-label="Hospital Icon" />
             </div>
             <div className="md:w-1/2 flex flex-col">
               <CardHeader>
@@ -56,7 +46,7 @@ export function ProjectsSection() {
                     </div>
                   </div>
                 </div>
-                {/* Removed the GitHub links section */}
+                {/* Removed the GitHub links section as per previous request */}
               </CardContent>
             </div>
           </div>
