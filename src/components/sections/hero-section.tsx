@@ -38,7 +38,7 @@ export function HeroSection() {
                 <Github className="h-6 w-6" />
               </Button>
             </Link>
-            <Link href="https://linkedin.com/in/aimane-maane" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <Link href="https://ma.linkedin.com/in/aimane-maane-92263b294" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
                 <Linkedin className="h-6 w-6" />
               </Button>
@@ -60,3 +60,4 @@ export function HeroSection() {
     </Section>
   );
 }
+

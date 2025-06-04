@@ -71,9 +71,9 @@ export function ContactSection() {
            <Card className="shadow-lg p-6">
              <CardContent className="p-0 space-y-4">
               <h3 className="font-headline text-xl font-semibold text-primary mb-4">Social Networks</h3>
-              <Link href="https://linkedin.com/in/aimane-maane" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group">
+              <Link href="https://ma.linkedin.com/in/aimane-maane-92263b294" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group">
                 <Linkedin className="h-5 w-5 text-muted-foreground group-hover:text-accent" />
-                <span>linkedin.com/in/aimane-maane</span>
+                <span>linkedin.com/in/aimane-maane-92263b294</span>
               </Link>
               <Link href="https://github.com/maane2025" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group">
                 <Github className="h-5 w-5 text-muted-foreground group-hover:text-accent" />
@@ -86,3 +86,4 @@ export function ContactSection() {
     </Section>
   );
 }
+
