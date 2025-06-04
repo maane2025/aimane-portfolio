@@ -4,7 +4,7 @@ import { SectionHeader } from '@/components/section-header';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import { Hospital } from 'lucide-react'; // Import Hospital icon
+import { Hospital, Github } from 'lucide-react'; // Import Hospital icon
 
 // Define the single project directly
 const project = {
@@ -24,8 +24,8 @@ export function ProjectsSection() {
         {/* Display the single project */}
         <Card className="overflow-hidden shadow-lg">
           <div className="md:flex">
-            <div className="md:w-1/2 bg-secondary/30 flex items-center justify-center p-8 h-64 md:h-full">
-              <Hospital className="h-32 w-32 text-primary" aria-label="Hospital Icon" />
+            <div className="md:w-1/2 bg-secondary/30 flex items-center justify-center p-8 h-64 md:h-auto"> {/* md:h-auto to allow content to dictate height */}
+              <Hospital className="h-40 w-40 text-primary" aria-label="Hospital Icon" />
             </div>
             <div className="md:w-1/2 flex flex-col">
               <CardHeader>
