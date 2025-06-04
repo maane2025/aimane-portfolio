@@ -14,21 +14,21 @@ export function HeroSection() {
             Maane Aimane
           </h1>
           <p className="text-xl md:text-2xl text-foreground font-medium">
-            Étudiant en Ingénierie Logicielle
+            Software Engineering Student
           </p>
           <p className="text-md md:text-lg text-muted-foreground">
-            Passionné par le développement d'applications innovantes et la résolution de problèmes complexes. Actuellement à la recherche d'un stage PFA.
+            Passionate about developing innovative applications and solving complex problems. Currently seeking a PFA internship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
               <a href="/Aimane_Maane_CV.pdf" download="Aimane_Maane_CV.pdf">
                 <Download className="mr-2 h-5 w-5" />
-                Télécharger CV
+                Download CV
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
               <Link href="#contact">
-                Contactez-moi
+                Contact Me
               </Link>
             </Button>
           </div>

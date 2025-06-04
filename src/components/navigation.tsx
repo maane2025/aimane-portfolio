@@ -15,11 +15,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { href: "#home", label: "Accueil", icon: Home },
-  { href: "#experience", label: "Expérience", icon: Briefcase },
-  { href: "#projects", label: "Projets", icon: Lightbulb },
-  { href: "#education", label: "Formation", icon: GraduationCap },
-  { href: "#skills", label: "Compétences", icon: Settings2 },
+  { href: "#home", label: "Home", icon: Home },
+  { href: "#experience", label: "Experience", icon: Briefcase },
+  { href: "#projects", label: "Projects", icon: Lightbulb },
+  { href: "#education", label: "Education", icon: GraduationCap },
+  { href: "#skills", label: "Skills", icon: Settings2 },
   { href: "#contact", label: "Contact", icon: Mail },
 ];
 
@@ -50,7 +50,7 @@ export function Navigation() {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">Ouvrir le menu</span>
+                <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background p-0">
@@ -61,7 +61,7 @@ export function Navigation() {
                   </Link>
                   <Button variant="ghost" size="icon" onClick={closeSheet}>
                     <X className="h-5 w-5" />
-                    <span className="sr-only">Fermer le menu</span>
+                    <span className="sr-only">Close menu</span>
                   </Button>
                 </div>
                 <nav className="flex flex-col gap-3 p-6">

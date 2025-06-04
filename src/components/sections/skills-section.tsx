@@ -10,9 +10,9 @@ const skillsData = {
   technologies: ["ReactJS", "Angular", "Flutter", "Firebase", "Docker", "Git/GitHub"],
   databases: ["MySQL", "MongoDB"],
   spokenLanguages: [
-    { lang: "Arabe", level: "Langue maternelle" },
-    { lang: "Français", level: "Professionnel" },
-    { lang: "Anglais", level: "Courant" },
+    { lang: "Arabic", level: "Native" },
+    { lang: "French", level: "Professional" },
+    { lang: "English", level: "Fluent" },
   ],
 };
 
@@ -45,18 +45,18 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills, icon: Icon
 export function SkillsSection() {
   return (
     <Section id="skills" className="bg-muted/30">
-      <SectionHeader title="Compétences" subtitle="Mes aptitudes techniques et linguistiques." />
+      <SectionHeader title="Skills" subtitle="My technical and linguistic abilities." />
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        <SkillCategory title="Langages de Programmation" skills={skillsData.languages} icon={Code} />
-        <SkillCategory title="Technologies & Outils" skills={skillsData.technologies} icon={Wrench} />
-        <SkillCategory title="Bases de Données" skills={skillsData.databases} icon={Database} />
+        <SkillCategory title="Programming Languages" skills={skillsData.languages} icon={Code} />
+        <SkillCategory title="Technologies & Tools" skills={skillsData.technologies} icon={Wrench} />
+        <SkillCategory title="Databases" skills={skillsData.databases} icon={Database} />
       </div>
       
       <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
         <CardHeader>
           <CardTitle className="font-headline text-xl text-primary flex items-center">
             <Languages className="mr-3 h-6 w-6 text-accent" />
-            Langues Parlées
+            Spoken Languages
           </CardTitle>
         </CardHeader>
         <CardContent>

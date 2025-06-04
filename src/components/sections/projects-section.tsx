@@ -9,9 +9,9 @@ const projects = [
   {
     title: "Hospital Management System",
     institution: "ENSET Mohammedia",
-    date: "Mars – Mai 2025 (Projet académique)",
-    description: "Création d’une application web basée microservices pour la gestion des patients, médecins et rendez-vous. API sécurisée avec gestion des rôles.",
-    technologies: ["React.js", "Spring Boot", "Microservices", "API REST"],
+    date: "March – May 2025 (Academic project)",
+    description: "Creation of a microservices-based web application for managing patients, doctors, and appointments. Secure API with role management.",
+    technologies: ["React.js", "Spring Boot", "Microservices", "REST API"],
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "web application dashboard"
   },
@@ -20,7 +20,7 @@ const projects = [
 export function ProjectsSection() {
   return (
     <Section id="projects" className="bg-muted/30">
-      <SectionHeader title="Projets Récents" subtitle="Quelques exemples de mes réalisations académiques et personnelles." />
+      <SectionHeader title="Recent Projects" subtitle="Some examples of my academic and personal achievements." />
       <div className="grid md:grid-cols-1 gap-8">
         {projects.map((project, index) => (
           <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">

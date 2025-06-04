@@ -7,19 +7,19 @@ import { GraduationCap, Award } from 'lucide-react';
 
 const educationHistory = [
   {
-    degree: "Cycle d’ingénieur en Génie Logiciel et Systèmes Informatiques Distribués",
+    degree: "Engineering Degree in Software Engineering and Distributed Information Systems",
     institution: "ENSET Mohammedia",
-    date: "Depuis Septembre 2023",
+    date: "Since September 2023",
   },
   {
-    degree: "Classes préparatoires aux grandes écoles, Option TSI",
-    institution: "Préparation aux concours des écoles d’ingénieurs",
-    date: "Septembre 2021 – Juillet 2023",
+    degree: "Preparatory Classes for Engineering Schools, TSI Option",
+    institution: "Preparation for engineering school entrance exams",
+    date: "September 2021 – July 2023",
   },
   {
-    degree: "Baccalauréat Sciences et Technologies Electriques – Mention Très Bien",
-    institution: "Lycée Ibn Mandour, Casablanca",
-    date: "Juillet 2021",
+    degree: "Baccalaureate in Electrical Sciences and Technologies – With High Honors",
+    institution: "Ibn Mandour High School, Casablanca",
+    date: "July 2021",
   },
 ];
 
@@ -27,29 +27,29 @@ const certifications = [
   {
     title: "Introduction to MongoDB",
     issuer: "MongoDB University",
-    date: "Janvier 2025",
+    date: "January 2025",
   },
   {
     title: "Networking Essentials",
     issuer: "Cisco Networking Academy",
-    date: "Janvier 2024",
+    date: "January 2024",
   },
   {
     title: "English for IT 1",
     issuer: "Cisco Networking Academy",
-    date: "Décembre 2023",
+    date: "December 2023",
   },
 ];
 
 export function EducationSection() {
   return (
     <Section id="education">
-      <SectionHeader title="Formation & Certifications" subtitle="Mon parcours académique et mes qualifications." />
+      <SectionHeader title="Education & Certifications" subtitle="My academic background and qualifications." />
       <div className="grid grid-cols-1 md:grid-cols-1 gap-10">
         <div>
           <h3 className="font-headline text-2xl font-semibold text-primary mb-6 flex items-center">
             <GraduationCap className="mr-3 h-7 w-7 text-accent" />
-            Parcours Académique
+            Academic Background
           </h3>
           <div className="space-y-6">
             {educationHistory.map((edu, index) => (

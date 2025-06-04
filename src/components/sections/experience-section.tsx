@@ -7,40 +7,40 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
-    title: "Stagiaire Développeur",
-    company: "Startup Casa Contrôle Technique",
+    title: "Developer Intern",
+    company: "Startup Casa Contrôle Technique", // Kept original as it might be a specific name
     location: "Casablanca",
-    date: "Juillet – Août 2024 (Stage d’initiation - 2 mois)",
+    date: "July – August 2024 (Initiation Internship - 2 months)",
     description: [
-      "1er mois : Développement d’un site vitrine HTML/CSS/JavaScript pour présenter les services de l’entreprise.",
-      "2e mois : Création d’une application desktop pour la génération des factures.",
+      "1st month: Development of an HTML/CSS/JavaScript showcase site to present the company's services.",
+      "2nd month: Creation of a desktop application for invoice generation.",
     ],
-    type: "Professionnelle",
+    type: "Professional",
   },
   {
-    title: "Formation Python – Encadrant",
+    title: "Python Training – Mentor",
     company: "Lycée Technique Mohammedia",
     location: "Mohammedia",
-    date: "Mai 2024 (Projet de fin de 1ère année)",
+    date: "May 2024 (1st year-end project)",
     description: [
-      "Organisation d’une formation en Python pour les élèves du tronc commun.",
-      "Projet collaboratif avec mon groupe.",
+      "Organized Python training for common core students.",
+      "Collaborative project with my group.",
     ],
-    type: "Volontaire",
+    type: "Voluntary",
   },
 ];
 
 export function ExperienceSection() {
   return (
     <Section id="experience">
-      <SectionHeader title="Expérience" subtitle="Mon parcours professionnel et mes engagements bénévoles." />
+      <SectionHeader title="Experience" subtitle="My professional journey and volunteer commitments." />
       <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
         {experiences.map((exp, index) => (
           <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardHeader>
               <div className="flex items-center justify-between mb-2">
                 <CardTitle className="font-headline text-xl md:text-2xl text-primary">{exp.title}</CardTitle>
-                <Badge variant={exp.type === "Professionnelle" ? "default" : "secondary"} className="bg-accent text-accent-foreground whitespace-nowrap">{exp.type}</Badge>
+                <Badge variant={exp.type === "Professional" ? "default" : "secondary"} className="bg-accent text-accent-foreground whitespace-nowrap">{exp.type}</Badge>
               </div>
               <CardDescription className="text-sm text-muted-foreground">
                 <span className="font-semibold">{exp.company}</span>, {exp.location}
