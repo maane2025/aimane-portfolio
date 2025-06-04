@@ -20,13 +20,13 @@ export function HeroSection() {
             Passionate about developing innovative applications and solving complex problems. Currently seeking an end-of-studies internship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground hover:scale-105 active:scale-95 transform" asChild>
               <a href="https://drive.google.com/drive/folders/174cAOQyjysyRJt1s_8-7dxLberU31NZ-?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
               </a>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" className="hover:scale-105 active:scale-95 transform" asChild>
               <Link href="#contact">
                 Contact Me
               </Link>
@@ -47,7 +47,7 @@ export function HeroSection() {
         </div>
         <div className="flex justify-center">
           <Image
-            src="https://placehold.co/400x400.png"
+            src="/cv.jpg"
             alt="Maane Aimane"
             width={400}
             height={400}
