@@ -5,7 +5,7 @@ import { SectionHeader } from '@/components/section-header';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import { Hospital, BookOpen, Github } from 'lucide-react';
+import { Hospital, BookOpen, Github, Landmark } from 'lucide-react';
 
 interface Project {
   title: string;
@@ -35,20 +35,28 @@ const projects: Project[] = [
     githubLink: "https://github.com/maane2025/boockapp",
     icon: BookOpen,
   },
+  {
+    title: "Ebank",
+    institution: "Personal Project",
+    description: "Application for managing bank accounts, built with Angular and Spring Boot.",
+    technologies: ["Angular", "Spring Boot"],
+    githubLink: "https://github.com/maane2025/ebaking-backend",
+    icon: Landmark,
+  },
 ];
 
 export function ProjectsSection() {
   return (
     <Section id="projects" className="bg-muted/30">
       <SectionHeader title="Recent Projects" subtitle="A showcase of my academic and personal initiatives." />
-      <div className="grid md:grid-cols-1 gap-12"> {/* Increased gap for better separation */}
+      <div className="grid md:grid-cols-1 gap-12">
         {projects.map((project, index) => (
           <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.01]">
             <div className="md:flex">
-              <div className="md:w-1/3 bg-secondary/30 flex items-center justify-center p-8 h-64 md:h-auto"> {/* Adjusted width for icon */}
-                <project.icon className="h-32 w-32 md:h-36 md:w-36 text-primary" aria-label={`${project.title} icon`} />
+              <div className="md:w-1/3 bg-secondary/30 flex items-center justify-center p-8 h-64 md:h-auto">
+                <project.icon className="h-40 w-40 text-primary" aria-label={`${project.title} icon`} />
               </div>
-              <div className="md:w-2/3 flex flex-col"> {/* Adjusted width for content */}
+              <div className="md:w-2/3 flex flex-col">
                 <CardHeader>
                   <CardTitle className="font-headline text-xl md:text-2xl text-primary">{project.title}</CardTitle>
                   {(project.institution || project.date) && (
