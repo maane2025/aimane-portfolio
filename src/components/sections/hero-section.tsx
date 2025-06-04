@@ -1,0 +1,62 @@
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Github, Linkedin, Download } from 'lucide-react';
+import { Section } from '@/components/section';
+
+export function HeroSection() {
+  return (
+    <Section id="home" className="bg-muted/30">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="space-y-6 text-center md:text-left">
+          <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-primary leading-tight">
+            Maane Aimane
+          </h1>
+          <p className="text-xl md:text-2xl text-foreground font-medium">
+            Étudiant en Ingénierie Logicielle
+          </p>
+          <p className="text-md md:text-lg text-muted-foreground">
+            Passionné par le développement d'applications innovantes et la résolution de problèmes complexes. Actuellement à la recherche d'un stage PFA.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+              <a href="/Aimane_Maane_CV.pdf" download="Aimane_Maane_CV.pdf">
+                <Download className="mr-2 h-5 w-5" />
+                Télécharger CV
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="#contact">
+                Contactez-moi
+              </Link>
+            </Button>
+          </div>
+          <div className="flex justify-center md:justify-start space-x-4 mt-6">
+            <Link href="https://github.com/maane2025" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
+                <Github className="h-6 w-6" />
+              </Button>
+            </Link>
+            <Link href="https://linkedin.com/in/aimane-maane" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
+                <Linkedin className="h-6 w-6" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <Image
+            src="https://placehold.co/400x400.png"
+            alt="Maane Aimane"
+            width={400}
+            height={400}
+            className="rounded-full shadow-xl object-cover aspect-square border-4 border-accent"
+            data-ai-hint="profile portrait"
+            priority
+          />
+        </div>
+      </div>
+    </Section>
+  );
+}
