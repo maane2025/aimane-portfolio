@@ -8,7 +8,7 @@ import { Briefcase } from 'lucide-react';
 const experiences = [
   {
     title: "Developer Intern",
-    company: "Startup Casa Contrôle Technique", // Kept original as it might be a specific name
+    company: "Startup Casa Contrôle Technique",
     location: "Casablanca",
     date: "July – August 2024 (Initiation Internship - 2 months)",
     description: [
@@ -36,7 +36,7 @@ export function ExperienceSection() {
       <SectionHeader title="Experience" subtitle="My professional journey and volunteer commitments." />
       <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
         {experiences.map((exp, index) => (
-          <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02]">
             <CardHeader>
               <div className="flex items-center justify-between mb-2">
                 <CardTitle className="font-headline text-xl md:text-2xl text-primary">{exp.title}</CardTitle>

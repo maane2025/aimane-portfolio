@@ -23,7 +23,7 @@ interface SkillCategoryProps {
 }
 
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills, icon: Icon }) => (
-  <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+  <Card className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02]">
     <CardHeader>
       <CardTitle className="font-headline text-xl text-primary flex items-center">
         <Icon className="mr-3 h-6 w-6 text-accent" />
@@ -52,7 +52,7 @@ export function SkillsSection() {
         <SkillCategory title="Databases" skills={skillsData.databases} icon={Database} />
       </div>
       
-      <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <Card className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02]">
         <CardHeader>
           <CardTitle className="font-headline text-xl text-primary flex items-center">
             <Languages className="mr-3 h-6 w-6 text-accent" />
