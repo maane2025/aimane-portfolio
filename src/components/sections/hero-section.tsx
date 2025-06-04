@@ -17,11 +17,11 @@ export function HeroSection() {
             Software Engineering Student
           </p>
           <p className="text-md md:text-lg text-muted-foreground">
-            Passionate about developing innovative applications and solving complex problems. Currently seeking a PFA internship.
+            Passionate about developing innovative applications and solving complex problems. Currently seeking an end-of-studies internship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
-              <a href="/Aimane_Maane_CV.pdf" download="Aimane_Maane_CV.pdf">
+              <a href="https://drive.google.com/drive/folders/174cAOQyjysyRJt1s_8-7dxLberU31NZ-?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
               </a>
